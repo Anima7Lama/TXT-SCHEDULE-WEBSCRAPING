@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>TXT SCHEDULE</title>
+</head>
+<body>
+    <h2>TXT SCHEDULES</h2>
+    <div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Day</th>
+                <th scope="col">Time</th>
+                <th scope="col">Schedule</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                {% for date in Dates %}
+                <td>{{date}}</th>
+                {% endfor %}
+                {% for day in Days %}
+                <td>{{day}}</td>
+                {% endfor %}
+                {% for time in Time %}
+                <td>{{time}}</td>
+                {% endfor %}
+                {% for activity in Tasks %}
+                <td>{{activity}}</td>
+                {% endfor %}
+              
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</body>
+</html>
